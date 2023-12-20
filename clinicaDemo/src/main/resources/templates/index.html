@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>ClínicaDemo</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+        body {
+            background: linear-gradient(to bottom right, #f2f2f2, #e6e6e6);
+        }
+        .jumbotron {
+            background-color: transparent;
+            text-align: center;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+        .btn-primary:hover {
+            background-color: #0069d9;
+            border-color: #0062cc;
+        }
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="jumbotron">
+        <h1>ClínicaDemo</h1>
+        <p>
+            <a th:href="@{/cadastrarAtendimento}" class="btn btn-primary btn-lg">Cadastrar Agendamento</a>
+            <a th:href="@{/agenda}"class="btn btn-primary btn-lg">Tabela de Agendamentos</a>
+        </p>
+    </div>
+     <img th:src="@{/clinica.JPG}">  
+</body>
+</html>
