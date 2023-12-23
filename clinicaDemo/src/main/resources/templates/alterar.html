@@ -98,7 +98,7 @@
                     <a th:href="@{/agenda}" class="btn btn-primary">Agenda de Atendimentos</a>
                 </div>
             </div>
-            <form th:action="@{/gravar}" th:object="${atendimento}" id="atendimentoForm" method="post" >
+            <form th:action="@{'/alterar/' + ${atendimento.id}}" th:object="${atendimento}" id="atendimentoForm" method="post" >
                 <div class="form-group">
                     <label for="nome">Nome:</label> <p> 
                         <input type="text" th:field="${atendimento.nome}" class="form-control" id="nome" name="nome" placeholder="Informe o nome do paciente" required minlength="10">
@@ -115,11 +115,11 @@
                     <label for="responsavel">Responsável pelo Atendimento:</label>
                     <input type="text" th:field="${atendimento.pResponsavel}" class="form-control" id="responsavel" name="responsavel" placeholder="Informe o responsável pelo atendimento" required minlength="10">
                 </div>
-                <button onclick="validarForm()" type="submit" class="btn btn-success">Gravar Formulário</button>
+                <button onclick="validarFormulario()" type="submit" class="btn btn-success">Alterar Dados</button>
                 <button type="reset" class="btn btn-default">Limpar Campos</button>
             </form>
             <script>
-                function validarForm() {
+                function validarFormulario() {
                     var nome = document.getElementById("nome");
                     var telefone = document.getElementById("telefone");
                     var data = document.getElementById("data");
